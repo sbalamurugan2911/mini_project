@@ -18,7 +18,7 @@ public class ElectronicShop {
 
 	
     // method for calculate discounted amount
-	 static double calculateDiscount(double price) {
+	  double calculateDiscount(double price) {
 		double discountedAmount = 0; //local variable to store discounted amount
 		if (price > 100000) {       // 15% discount if price more than 100000 
 			discountedAmount = price - (price * 0.15);
@@ -35,7 +35,7 @@ public class ElectronicShop {
 	 
     void bill() {
     	double bill=0,amount;// local variable to calculate total bill amount
-    	System.out.println("------------------------ Bill ----------------------------------\nbala");
+    	System.out.println("------------------------ Bill ----------------------------------\n");
     	System.out.println("Customer Name          : "+name);
     	System.out.println("No of Laptop purchased : "+quantity+"\n");
     	for(int i=0;i<price.length;i++) {
@@ -44,7 +44,7 @@ public class ElectronicShop {
     	System.out.println("\nPrice after discount : \n");
     	// using calculateDiscount method to find price after discount for each laptop
     	for(int i=0;i<price.length;i++) {
-    	System.out.println("Laptop "+(i+1)+" price is : "+(amount=(ElectronicShop.calculateDiscount(price[i]))));
+    	System.out.println("Laptop "+(i+1)+" price is : "+(amount=(calculateDiscount(price[i]))));
     	bill+=amount;
     	}
     	System.out.println("\nTotal bill amount is : "+bill);
